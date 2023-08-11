@@ -1,0 +1,7 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+
+  git:
+    repo: https://github.com/kvnallsn/scadrial-cluster
+    tag: HEAD

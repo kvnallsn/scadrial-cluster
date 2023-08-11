@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cyberchef
+  namespace: cyberchef
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: cyberchef
+  template:
+    metadata:
+      labels:
+        app: cyberchef
+    spec:
+      containers:
+        - image: mpepping/cyberchef:v10.5.2
+          name: cyberchef
+          ports:
+            - containerPort: 8000
