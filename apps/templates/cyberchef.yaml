@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: {{ .Values.spec.destination.server }}
-  project: default
+  project: {{ .Values.spec.project.name }}
   source:
     path: cyberchef
     repoURL: {{ .Values.spec.git.repo }}
